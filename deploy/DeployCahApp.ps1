@@ -20,6 +20,7 @@ function Get-CharsInRange([char] $start, [char] $end) {
 function Get-EscapedXMLString([string] $str) {
 	$updatedStr = $str -replace '&', '&amb;'
 	$updatedStr = $str -replace '<', '&lt;'
+	$updatedStr = $str -replace '\\', '\\'
 
 	return $updatedStr
 }
